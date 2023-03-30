@@ -1,9 +1,5 @@
 /*
-  Dockerfile Teardown
+  The Build Process in Detail
   - pic
-
-  What's a Base Image
-  - pic
-
 
 */
