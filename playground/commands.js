@@ -51,7 +51,9 @@
 
   - docker build .
 
-
+  - build with tags: 
+    > docker build -t hungbui7690/redis:latest .
+    > docker run hungbui7690/redis
 
 
 

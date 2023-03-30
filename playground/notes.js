@@ -1,24 +1,30 @@
 /*
-  Rebuilds with Cache
+  Tagging an Image
+  - when we build, we will get the id 
+  - docker run <id>
+    > start a container, and run the instance of that image in the container
+
+  - the problem is the <id> is hard to remember, so we need to copy it 
+    > it should be good if we can do:
+      + docker run redis
+      + docker run hello-world
+        ...
+
   - pic
 
-  - add new line in Dockerfile
-    > RUN apk add --update redis
-      RUN apk add --update gcc 
+  - docker build -t hungbui7690/redis:latest .
+    > don't forget the dot at the end 
 
-  - rebuild
-    > docker build .
+  - docker run hungbui7690/redis
+    > don't need to specify version when run > use the latest one
 
-////////////////////////////////////
 
-  - if we build again > gcc will use caching to install as well 
+  *** tag name: 
+  - dockerID/project:version
+    > hungbui7690/mern-movie:latest
 
-////////////////////////////////////
 
-  - but if we switch the 2 RUN lines > now, it will not use caching anymore for both
-    > RUN apk add --update gcc
-      RUN apk add --update redis
   
 
-  *** we know that when we change the Dockerfile, we cannot use caching >> put the change far down of the file as possible
+
 */
