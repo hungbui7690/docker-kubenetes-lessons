@@ -1,9 +1,9 @@
 /*
-  The Purpose of the IT Flag
+  Getting a Command Prompt in a Container
   - pic
 
-  > -it === -i -t
-    > -i: when we run the command, we want to attach our terminal to STDIN
-    > -t: to make the text show a little bit more pretty (nice format)
+  - we want to access to shell in the container
+    > we don't need to run "docker exec" all day
 
+  - docker exec -it <id> sh
 */

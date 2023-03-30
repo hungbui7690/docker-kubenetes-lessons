@@ -54,6 +54,9 @@
   Execute Command in Running Container
   - docker exec -it <id> <command>
 
+  - Shell
+    > docker exec -it <id> sh
+
 
 /////////////////////////////////////////
 
