@@ -1,8 +1,6 @@
 /*
-  Restarting Stopped Containers
+  Removing Stopped Containers
 
-  - docker ps --all
-    > get <id>
-  - docker start <id>
+  - docker system prune
 
 */
