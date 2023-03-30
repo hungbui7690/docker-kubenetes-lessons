@@ -1,13 +1,8 @@
 /*
-  Container Lifecycle
-  - pic
+  Restarting Stopped Containers
 
-  - run = create + start 
+  - docker ps --all
+    > get <id>
+  - docker start <id>
 
-  - docker create hello-world
-    > return <id>
-  - docker start -a <id>
-    > -a: print the log (output)
-  - docker start <id> 
-    > does not print the log
 */
