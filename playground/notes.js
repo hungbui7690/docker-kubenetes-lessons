@@ -1,30 +1,26 @@
 /*
-  Tagging an Image
-  - when we build, we will get the id 
-  - docker run <id>
-    > start a container, and run the instance of that image in the container
-
-  - the problem is the <id> is hard to remember, so we need to copy it 
-    > it should be good if we can do:
-      + docker run redis
-      + docker run hello-world
-        ...
+  Manual Image Generation with Docker Commit
+  - we know that we can create image 
+  - then start the container with the instance of that image 
+  - but we also generate from a container as well
+    > similar to dockerfile, but we do it on command line
 
   - pic
 
-  - docker build -t hungbui7690/redis:latest .
-    > don't forget the dot at the end 
 
-  - docker run hungbui7690/redis
-    > don't need to specify version when run > use the latest one
+  - docker commit -c
+    > -c: default command > similar to CMD   
 
+  *** we don't use this approach in the real world 
+    > most of the time, we use Dockerfile to generate image
 
-  *** tag name: 
-  - dockerID/project:version
-    > hungbui7690/mern-movie:latest
+////////////////////////////////////////////////////
 
+  If there is any error: 
+  - docker commit -c 'CMD ["redis-server"]' <CONTAINERID>
+    > Windows user: you may get an error like "/bin/sh: [redis-server]: not found" or "No Such Container"
 
-  
-
+  - Instead, try running the command like this:
+    > docker commit -c "CMD 'redis-server'" <CONTAINERID>
 
 */
