@@ -1,6 +1,13 @@
 /*
-  Creating Docker Images
+  Building a Dockerfile
   - pic
-    > introduce Dockerfile
+
+  - create Dockerfile 
+  - add config 
+
+  - run: 
+    > docker build .
+      - this will return <id>
+    > docker run <id>
 
 */
