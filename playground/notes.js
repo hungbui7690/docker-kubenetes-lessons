@@ -1,7 +1,5 @@
 /*
-  Stopping Containers
-  - docker stop <id>
-  - docker kill <id>
-
+  Multi-Command Containers
+  - pic
 
 */
