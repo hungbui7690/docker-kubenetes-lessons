@@ -51,7 +51,7 @@
 
 /////////////////////////////////////////
 
-  Execute Command in Running Container
+  Execute Command in "Running" Container
   - docker exec -it <id> <command>
 
   - Shell
@@ -60,7 +60,11 @@
 
 /////////////////////////////////////////
 
+  Run a Container with Shell 
+  - docker run -it <image_name> <command>
+    > docker run -it busybox sh
 
+  *** this will not start any process in that image
 
 /////////////////////////////////////////
 
