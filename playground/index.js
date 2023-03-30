@@ -1,9 +1,18 @@
 /*
-  Node Server Setup
-  - create package.json MANUALLY
-  - create index.js
+  A Few Planned Errors
+  - now, we want to wrap this project into a container 
+  - to start nodejs app:
+    + npm install 
+    + npm start
 
-  *** commands.js will be moved to #pictures/
+  - pic
+
+  (1)
+  - create Dockerfile
+
+  (2)
+  - docker build .
+    > error: npm: not found
 */
 
 const express = require('express')
