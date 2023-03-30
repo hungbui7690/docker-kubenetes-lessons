@@ -17,7 +17,9 @@
   - docker run hello-world echo hi there
 
 
-
+  List out containers
+  - docker ps  
+  - docker ps --all
 
 
 

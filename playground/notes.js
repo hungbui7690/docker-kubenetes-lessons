@@ -1,9 +1,7 @@
 /*
-  Overriding Default Commands
+  Listing Running Containers
   - pic
 
-  - docker run busybox echo hi there
-  - docker run busybox ls
-  - docker run hello-world ls
-  - docker run hello-world echo hi there
+  - docker ps  
+  - docker ps --all
 */
