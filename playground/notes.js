@@ -1,6 +1,7 @@
 /*
-  Removing Stopped Containers
+  Stopping Containers
+  - docker stop <id>
+  - docker kill <id>
 
-  - docker system prune
 
 */
