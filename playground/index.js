@@ -1,7 +1,14 @@
 /*
-  Automatic Container Restarts P3
-  - if we want to test > just change the exit code to non-zero code
-    > need to rebuild
+  Automatic Container Restarts P4
+  - docker-compose.yaml
+
+  - restart: unless-stopped
+    > always restart, unless we want force it to stop
+  - restart: "no"
+    > with the other policies > we don't have to have double/single quote, but for this one, we must have 
+    > because no without double quote = false
+
+  *** normally, we use "on-failure"
 
 */
 
