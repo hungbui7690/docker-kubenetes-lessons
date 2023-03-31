@@ -1,14 +1,16 @@
 /*
-  Automatic Container Restarts P4
-  - docker-compose.yaml
+  Container Status with Docker Compose
+  - docker run redis 
+  - docker ps 
+    > show the status of containers
 
-  - restart: unless-stopped
-    > always restart, unless we want force it to stop
-  - restart: "no"
-    > with the other policies > we don't have to have double/single quote, but for this one, we must have 
-    > because no without double quote = false
+  - docker-compose up
+    > start 
+  - docker-compose ps 
+    > show the status > just for compose 
+    
 
-  *** normally, we use "on-failure"
+  *** "docker-compose ps" need to be run in the same folder of docker-compose.yaml file > since it needs to read that file to determine which containers is running
 
 */
 
@@ -25,7 +27,7 @@ const client = redis.createClient({
 client.set('visits', 0)
 
 app.get('/', (req, res) => {
-  process.exit(9) // ***
+  process.exit(9)
 
   client.get('visits', (err, visits) => {
     res.send('Number of visits is: ' + visits)

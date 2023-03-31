@@ -71,6 +71,7 @@
   - docker-compose up -d 
   - docker-compose down
 
+  - docker-compose ps 
 
 
 
@@ -98,7 +99,7 @@ services:
   redis-server:
     image: 'redis'
   node-app:
-    restart: always 
+    restart: on-failure 
     build: .
     ports:
       - 8081:8081
