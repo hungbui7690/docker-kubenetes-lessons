@@ -1,15 +1,8 @@
 /*
-  Docker Compose for Running Tests
-  - modify docker-compose.yaml
+  Shortcomings on Testing
+  - pic    
 
-  - docker-compose up
-
-  - add 1 more test and save to see the changes
-
-  *** the problem with this is: 
-    - we cannot interactive with the command line by using "w" or "p"...
-    
-
+  - docker attach <running_container_id>
 */
 
 import logo from './logo.svg'

@@ -79,8 +79,8 @@
   - docker run -p 3000:3000 -v /app/node_modules -v ${PWD}:/app <image_id>
 
 
-
-
+  Attach
+  - docker attach <running_container_id>
 
 
 
