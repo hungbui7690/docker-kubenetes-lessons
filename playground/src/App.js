@@ -1,8 +1,6 @@
 /*
-  Need for Nginx ***
+  Multi-Step Docker Builds
   - pic
-  - we will make a production Dockerfile with nginx in it 
-
 
 */
 
