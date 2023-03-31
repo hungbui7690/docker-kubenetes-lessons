@@ -1,14 +1,21 @@
 /*
-  Base Image Issues P1
-  - we got the error in prev lesson > because we don't have npm in the base image (alpine)
-  - to fix, 2 options: 
-    + find another base image that has node and npm pre-installed inside it
-    + install ourself
-
-  - pic > we want to use version 6.14
+  Base Image Issues P2
+  - check picture ***
   - Dockerfile
-    > FROM node:6.14 
+    > FROM node:alpine
+
+    > we will get this error: "npm ERR! idealTree already exists"
+      > this is because Node v15 
+      > WORKDIR /usr/app
+
+    > enoent ENOENT: no such file or directory, open '/usr/app/package.json'
+      > fix in next lessons
     
+  *** node:alpine > what does it mean? 
+      > alpine means compact and small
+      > node:alpine: we don't have a lot of preinstalled programs
+        > just have some very basic commands
+
 */
 
 const express = require('express')

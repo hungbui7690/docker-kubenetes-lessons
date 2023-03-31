@@ -1,9 +1,11 @@
 # Specify base image
-FROM node:6.14
+FROM node:alpine
+
+WORKDIR /usr/app
 
 # Install some dependencies
-
 RUN npm install
+
 
 # Default command
 CMD ["npm", "start"]
