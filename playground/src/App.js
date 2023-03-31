@@ -1,8 +1,9 @@
 /*
-  Shortcomings on Testing
-  - pic    
+  Need for Nginx ***
+  - pic
+  - we will make a production Dockerfile with nginx in it 
 
-  - docker attach <running_container_id>
+
 */
 
 import logo from './logo.svg'
