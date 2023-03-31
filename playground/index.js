@@ -1,12 +1,19 @@
 /*
-  Docker Compose Commands
-  - docker-compose up
-    > run 
-  - docker-compose up --build
-    > build & run
+  Stopping Docker Compose Containers
+  - docker run -d redis 
+    > run redis in the background
+  - docker ps
+    > get the id 
+  - docker stop <id>
 
-  > http://localhost:8081/
-    > everytime we refresh, the number increase
+  
+  - with docker-compose, we starts and runs multiple containers at the same time > it's a pain to find each id and stop one by one 
+  - pic
+
+  > docker-compose up -d 
+  > docker-compose down
+
+
 */
 
 const express = require('express')

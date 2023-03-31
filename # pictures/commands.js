@@ -60,10 +60,16 @@
 // DOCKER COMPOSE
 /////////////////////////////////////////
 
-  - 
+  - docker-compose up
+    > run only
+  - docker-compose up --build
+    > build + run
 
+  - docker run -d redis
+    > run redis in the background
 
-
+  - docker-compose up -d 
+  - docker-compose down
 
 
 
