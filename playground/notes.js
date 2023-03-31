@@ -1,5 +1,5 @@
 /*
-  Development Workflow
-  - pic
+  Flow Specifics ***
+  - pic only
 
 */
