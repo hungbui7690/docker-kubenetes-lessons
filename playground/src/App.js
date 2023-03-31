@@ -1,23 +1,16 @@
 /*
-  Do We Need COPY???
-  - Dockerfile
-    > COPY . .
-      > do we still need this line? 
+  Live Updating Tests
+  - if we modify App.test.js 
+    > we need to rebuild again
+  - because the container we use for testing does not have volume 
+    > changes are not reflected
 
-  *** now, even though we don't need this because we can ref to volume > but we should keep this like a reference > and maybe we will use it in the future
 
-////////////////////////////////////////
+  - we can setup another services for testing in docker-compose.yaml
+  - or we can attach to the old compose
+    > picture
 
-  Executing Tests
-  - we want to run test in the container
-
-  (1) docker build -f Dockerfile.dev . 
-    > get id 
-  
-  (2) 
-    - docker run <id> npm run test
-    - docker run -it <id> npm run test
-      > should use this one since when testing, we need to interact with the command line
+  *** this is not a good approach
 
 */
 
