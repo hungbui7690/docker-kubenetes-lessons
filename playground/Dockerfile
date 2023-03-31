@@ -5,10 +5,9 @@ FROM node:alpine
 WORKDIR /usr/app
 
 # copy from current folder to /usr/app in container
-COPY ./ ./
-
-# Install some dependencies
+COPY ./package.json ./
 RUN npm install
+COPY ./ ./
 
 
 # Default command

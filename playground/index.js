@@ -1,16 +1,29 @@
 /*
-  Specifying a Working Directory
-  - pic
+  Unnecessary Rebuilds
+  - we change something in the index.js > src code
 
-  - Dockerfile
-      WORKDIR /usr/app
-      COPY ./ ./
-      > with this setup, the default folder is /usr/app 
-      > ./ in COPY is /usr/app
+  - build again 
+    - COPY ./ ./
+      RUN npm install
+      > copy then run npm install 
+      > run npm install every time we copy new file 
+        > we cannot enjoy the benefits of caching
 
-  - rebuild
-  - docker run -it <id> sh
-    > default location will be /usr/app
+//////////////////////////////////////////////////
+
+  Minimizing Cache Busting and Rebuilds    
+  - we will copy 2 times: 
+    + copy package.json to run the npm install 
+    + then copy the rest
+
+  - COPY ./package.json ./
+    RUN npm install
+    COPY ./ ./
+
+  - build
+  - change index.js then rebuild
+    > now, most of the tasks can use caching
+    > just COPY ./ ./ not use caching
 
 */
 
