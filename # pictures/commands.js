@@ -69,6 +69,23 @@
 
 
 
+/////////////////////////////////////////
+// docker-compose.yaml
+/////////////////////////////////////////
+
+# this is the version of docker-compose that we want to use
+version: '3'
+# services = containers
+services:
+  redis-server:
+    image: 'redis' # use this image to build the container
+  node-app:
+    build: . # use the Dockerfile in current folder to build the container
+    # - : array
+    ports:
+      - 8081: 8081
+
+
 
 
 

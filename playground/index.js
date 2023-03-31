@@ -1,21 +1,9 @@
 /*
-  Introducing Docker Compose
-  - docker run hungbui7690/visits
-    > error: connect ECONNREFUSED 127.0.0.1:6379
-    > our server is stating up, but there's no redis server to connect to 
-
-  - so we need to have redis server
-    > docker run redis
-
-  - after this setup, still have the same error 
-
+  Docker Compose Files
   - pic
 
-  - run: docker-compose
-    > show all options
-
-  *** docker-compose helps us do not make repetitive commands in docker-cli
-    > helps us to run multiple docker commands quickly 
+  - create docker-compose.yaml
+    > check the comments to understand what this file does 
 
 */
 
