@@ -74,16 +74,21 @@
 // Dockerfile
 /////////////////////////////////////////
 
-# Use an existing docker image as a base
-FROM alpine 
+# Specify base image
+FROM node:alpine
 
-# Download an install a dependency
-RUN apk add --update redis
-RUN apk add --update gcc
+# this line just be used to fix "idealTree already exists" error 
+WORKDIR /usr/app
 
-# Tell the image what to do when it starts as a container
-CMD ["redis-server"]
+# copy from current folder to /usr/app in container
+COPY ./ ./
 
+# Install some dependencies
+RUN npm install
+
+
+# Default command
+CMD ["npm", "start"]
 
 
 
