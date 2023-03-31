@@ -1,16 +1,15 @@
 /*
-  A Few Missing Files
-  - enoent ENOENT: no such file or directory, open '/usr/app/package.json'
+  Container Port Mapping
   - pic
+  - docker run with port mapping
+    > docker run -p 5000:5000 hungbui7690/simpleweb
 
-  Copying Build Files
-  - Dockerfile
-    > COPY ./ ./
+  *** by default, there no restriction for the container to reach out : npm install > reach out to download the libs 
+    > but on the other hand, incoming requests to container is restricted
 
-  - docker build -t hungbui7690/simpleweb .
-    > http://localhost:5000/
-    > after build, we cannot access 
-
+  *** port on local and container do not need to be matched 
+    > we can tell docker that everytime we have incoming requests to port 5000, please forward it to port 8080 in the container
+    > docker run -p 5000:8080 hungbui7690/simpleweb
 */
 
 const express = require('express')

@@ -43,17 +43,26 @@
   - docker run -it <image_name> <command>
     > docker run -it busybox sh
 
-  *** this will not start any process in that image
-
-/////////////////////////////////////////
-// IMAGES
-/////////////////////////////////////////
-
+  
+  Build Image
   - docker build .
 
   - build with tags: 
     > docker build -t hungbui7690/redis:latest .
     > docker run hungbui7690/redis
+
+  Run Container with port mapping: 
+  - docker run -p 5000:5000 hungbui7690/simpleweb
+  - docker run -p 5000:8080 hungbui7690/simpleweb
+
+
+
+
+
+
+
+
+
 
 
 
