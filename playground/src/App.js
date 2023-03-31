@@ -1,25 +1,11 @@
 /*
-  Creating the Dev Dockerfile
-  - pic
-    > we will have 2 Dockerfile:
-      + production
-      + dev
+  Duplicating Dependencies
+  - if we rebuild again, it takes less time > but it still needs to run the copy steps 
+    > node_modules folder
 
-  (1)
-  - create Dockerfile.dev
-    > for development
+  - delete node_modules/ since we run npm install in the container 
 
-  - this Dockerfile will be a little bit different than what we learned
-    - FROM node:16-alpine
-      > need to have specific version of node to avoid bugs
-    - COPY . .
-      > not ./ ./
-    
-  (2) because we use Dockerfile.dev > if we run "docker build ." > err
-    > docker build -f Dockerfile.dev .
-      
-  
-  *** if it takes too long to run "npm install" > check Docker Desktop, then update it and run again
+  - after deleting, it build much faster
 
 */
 
