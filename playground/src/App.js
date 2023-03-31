@@ -1,10 +1,17 @@
 /*
-  Shorthand with Docker Compose
-  - create docker-compose.yaml
-    > build: . : build with Dockerfile > but this time, we don't have Dockerfile, but Dockerfile.dev
+  Overriding Dockerfile Selection
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
 
   - docker-compose up
-    > error: no Dockerfile
+
+
+  *** if we don't see changes reflected > add this: 
+    services:
+      web:
+        environment:
+          - CHOKIDAR_USEPOLLING=true
 
 */
 
@@ -16,7 +23,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <p>Hello World!</p>
+        <p>Hello World!!!</p>
         <a
           className='App-link'
           href='https://reactjs.org'
