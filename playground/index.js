@@ -1,13 +1,9 @@
 /*
-  Automatic Container Restarts P1
-  - pic
-
+  Automatic Container Restarts P2
   - docker-compose.yaml
-      node-app:
-        restart: always
+      restart: on-failure
 
-  - docker-compose up 
-    > we don't have to build since we don't change anything in index.js
+  *** since the exit code = 0 > no error > no restart 
 */
 
 const express = require('express')
