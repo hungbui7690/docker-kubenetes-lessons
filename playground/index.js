@@ -1,22 +1,18 @@
 /*
-  Container Maintenance with Compose
-  - we have not discussed about if the container that crashes
-  - we will add code so that if there is error > server will crash entirely
-    > below
-
-  - docker-compose up --build
-  - http://localhost:8081/
-    > exited with code 0
-
-  - docker ps
-    > only have redis container left
+  Automatic Container Restarts P1
   - pic
 
+  - docker-compose.yaml
+      node-app:
+        restart: always
+
+  - docker-compose up 
+    > we don't have to build since we don't change anything in index.js
 */
 
 const express = require('express')
 const redis = require('redis')
-const process = require('process') // ***
+const process = require('process')
 
 const app = express()
 
@@ -27,7 +23,7 @@ const client = redis.createClient({
 client.set('visits', 0)
 
 app.get('/', (req, res) => {
-  process.exit(0) // ***
+  process.exit(0)
 
   client.get('visits', (err, visits) => {
     res.send('Number of visits is: ' + visits)
