@@ -1,16 +1,14 @@
 /*
-  Live Updating Tests
-  - if we modify App.test.js 
-    > we need to rebuild again
-  - because the container we use for testing does not have volume 
-    > changes are not reflected
+  Docker Compose for Running Tests
+  - modify docker-compose.yaml
 
+  - docker-compose up
 
-  - we can setup another services for testing in docker-compose.yaml
-  - or we can attach to the old compose
-    > picture
+  - add 1 more test and save to see the changes
 
-  *** this is not a good approach
+  *** the problem with this is: 
+    - we cannot interactive with the command line by using "w" or "p"...
+    
 
 */
 
