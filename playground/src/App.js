@@ -1,16 +1,14 @@
 /*
-  Starting the Container
-  - docker run <image_id> 
-    > missing port mapping
+  Docker Volumes
+  - pic
 
-  - docker run -it -p 3000:3000 <IMAGE_ID>
+  (1)
+  - docker build -f Dockerfile.dev .
+    > return id
 
-  
-  *** if we change something, we need to rebuild > it takes a lot of time 
-      > next lesson
-
-  *** if we run the docker run command, and it exists right away > add -it flag: 
-      > docker run -it -p 3000:3000 IMAGE_ID
+  (2)
+  - docker run -p 3000:3000 -v $(pwd):/app <id>
+    > error
 
 */
 
