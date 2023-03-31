@@ -1,20 +1,15 @@
 /*
-  Base Image Issues P2
-  - check picture ***
+  A Few Missing Files
+  - enoent ENOENT: no such file or directory, open '/usr/app/package.json'
+  - pic
+
+  Copying Build Files
   - Dockerfile
-    > FROM node:alpine
+    > COPY ./ ./
 
-    > we will get this error: "npm ERR! idealTree already exists"
-      > this is because Node v15 
-      > WORKDIR /usr/app
-
-    > enoent ENOENT: no such file or directory, open '/usr/app/package.json'
-      > fix in next lessons
-    
-  *** node:alpine > what does it mean? 
-      > alpine means compact and small
-      > node:alpine: we don't have a lot of preinstalled programs
-        > just have some very basic commands
+  - docker build -t hungbui7690/simpleweb .
+    > http://localhost:5000/
+    > after build, we cannot access 
 
 */
 

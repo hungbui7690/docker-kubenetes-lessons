@@ -1,7 +1,11 @@
 # Specify base image
 FROM node:alpine
 
+# this line just be used to fix "idealTree already exists" error 
 WORKDIR /usr/app
+
+# copy from current folder to ./ in container
+COPY ./ ./
 
 # Install some dependencies
 RUN npm install
