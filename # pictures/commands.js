@@ -75,8 +75,8 @@
   Build with specific file 
   - docker build -f Dockerfile.dev .
 
-
-
+  Volumes
+  - docker run -p 3000:3000 -v /app/node_modules -v ${PWD}:/app <image_id>
 
 
 
