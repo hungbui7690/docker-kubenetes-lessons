@@ -1,11 +1,16 @@
 /*
-  Duplicating Dependencies
-  - if we rebuild again, it takes less time > but it still needs to run the copy steps 
-    > node_modules folder
+  Starting the Container
+  - docker run <image_id> 
+    > missing port mapping
 
-  - delete node_modules/ since we run npm install in the container 
+  - docker run -it -p 3000:3000 <IMAGE_ID>
 
-  - after deleting, it build much faster
+  
+  *** if we change something, we need to rebuild > it takes a lot of time 
+      > next lesson
+
+  *** if we run the docker run command, and it exists right away > add -it flag: 
+      > docker run -it -p 3000:3000 IMAGE_ID
 
 */
 
