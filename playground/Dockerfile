@@ -4,9 +4,9 @@ WORKDIR '/app'
 COPY ./package.json .
 RUN npm install 
 COPY . .
-RUN npm run build 
+RUN npm run build
 
-# nginx phase
+# # nginx phase
 FROM nginx
 # copy from builder phase > use --from
-COPY --from=builder /app/build usr/share/ningx/html
+COPY --from=0 /app/build /usr/share/nginx/html
