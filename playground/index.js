@@ -1,9 +1,14 @@
 /*
-  Docker Compose Files
+  Networking with Docker Compose 
+  - by creating the docker-compose file, the services will be in the same network
   - pic
 
-  - create docker-compose.yaml
-    > check the comments to understand what this file does 
+  - but how can we access redis server from nodejs 
+  - normally, when connect to redis db server
+      const client = redis.createClient({
+        host: 'https://my-redis-server.com' 
+      })
+  - with docker-compose, just put the name of the service
 
 */
 
@@ -12,7 +17,10 @@ const redis = require('redis')
 
 const app = express()
 
-const client = redis.createClient()
+const client = redis.createClient({
+  host: 'redis-server', // ***
+  port: 6379, // default port of redis
+})
 client.set('visits', 0)
 
 app.get('/', (req, res) => {
