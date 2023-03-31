@@ -1,23 +1,22 @@
 /*
-  Stopping Docker Compose Containers
-  - docker run -d redis 
-    > run redis in the background
+  Container Maintenance with Compose
+  - we have not discussed about if the container that crashes
+  - we will add code so that if there is error > server will crash entirely
+    > below
+
+  - docker-compose up --build
+  - http://localhost:8081/
+    > exited with code 0
+
   - docker ps
-    > get the id 
-  - docker stop <id>
-
-  
-  - with docker-compose, we starts and runs multiple containers at the same time > it's a pain to find each id and stop one by one 
+    > only have redis container left
   - pic
-
-  > docker-compose up -d 
-  > docker-compose down
-
 
 */
 
 const express = require('express')
 const redis = require('redis')
+const process = require('process') // ***
 
 const app = express()
 
@@ -28,6 +27,8 @@ const client = redis.createClient({
 client.set('visits', 0)
 
 app.get('/', (req, res) => {
+  process.exit(0) // ***
+
   client.get('visits', (err, visits) => {
     res.send('Number of visits is: ' + visits)
     client.set('visits', parseInt(visits) + 1)
