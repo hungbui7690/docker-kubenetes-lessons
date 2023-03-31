@@ -1,14 +1,26 @@
 /*
-  Project Generation
+  Creating the Dev Dockerfile
   - pic
+    > we will have 2 Dockerfile:
+      + production
+      + dev
 
-  - npx create-react-app .
+  (1)
+  - create Dockerfile.dev
+    > for development
+
+  - this Dockerfile will be a little bit different than what we learned
+    - FROM node:16-alpine
+      > need to have specific version of node to avoid bugs
+    - COPY . .
+      > not ./ ./
     
-  - run each command above
-    + npm run start 
-    + npm run test
-    + npm run build
+  (2) because we use Dockerfile.dev > if we run "docker build ." > err
+    > docker build -f Dockerfile.dev .
+      
   
+  *** if it takes too long to run "npm install" > check Docker Desktop, then update it and run again
+
 */
 
 import logo from './logo.svg'

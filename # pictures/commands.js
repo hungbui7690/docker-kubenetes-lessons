@@ -70,8 +70,10 @@
 
   - docker-compose ps 
 
+///////////////////////////////////////
 
-
+  Build with specific file 
+  - docker build -f Dockerfile.dev .
 
 
 
