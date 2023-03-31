@@ -1,19 +1,10 @@
 /*
-  Bookmarking Volumes ***
-  - we don't need to do anything from the previous lesson (WSL2)
-  - pic > explain error in last lecture
+  Shorthand with Docker Compose
+  - create docker-compose.yaml
+    > build: . : build with Dockerfile > but this time, we don't have Dockerfile, but Dockerfile.dev
 
-
-  > docker build -f Dockerfile.dev .
-    > return image_id
-  > docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
-    > this will throw error
-
-  - For windows, we need to use ${pwd} instead of $(pwd)
-    > docker run -p 3000:3000 -v /app/node_modules -v ${PWD}:/app <image_id>
-    > $(pwd) !== ${pwd}
-
-  *** after this setup, whenever we change the code, it will reflects right away without rebuild
+  - docker-compose up
+    > error: no Dockerfile
 
 */
 
