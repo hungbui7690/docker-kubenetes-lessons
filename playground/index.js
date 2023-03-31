@@ -1,9 +1,8 @@
 /*
-  Automatic Container Restarts P2
-  - docker-compose.yaml
-      restart: on-failure
+  Automatic Container Restarts P3
+  - if we want to test > just change the exit code to non-zero code
+    > need to rebuild
 
-  *** since the exit code = 0 > no error > no restart 
 */
 
 const express = require('express')
@@ -19,7 +18,7 @@ const client = redis.createClient({
 client.set('visits', 0)
 
 app.get('/', (req, res) => {
-  process.exit(0)
+  process.exit(9) // ***
 
   client.get('visits', (err, visits) => {
     res.send('Number of visits is: ' + visits)
