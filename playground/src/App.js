@@ -1,6 +1,7 @@
 /*
-  Multi-Step Docker Builds
-  - pic
+  Implementing Multi-Step Builds
+  - create Dockerfile 
+    > check dockerhub > nginx to understand phase 2
 
 */
 
