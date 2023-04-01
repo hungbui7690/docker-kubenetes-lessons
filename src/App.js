@@ -1,5 +1,5 @@
 /*
-  AWS Elastic Beanstalk
+  More on Elastic Beanstalk
   - pic
 
 */
