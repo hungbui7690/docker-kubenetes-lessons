@@ -1,0 +1,8 @@
+# need to have sudo permission
+sudo: require
+services:
+  - docker
+
+# these series of steps will be run at first
+before_install:
+  - docker build -t hungbui7690/docker-react -f Dockerfile.dev .

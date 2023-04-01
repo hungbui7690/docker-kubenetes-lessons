@@ -1,6 +1,9 @@
 /*
-  Github & Travis CI Setup
+  Travis YML File Configuration
   - pic
+
+  - create .travis.yml
+    *** need to have leading dot
 
 */
 
