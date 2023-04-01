@@ -1,13 +1,24 @@
 /*
-  Automatic Build Creation P1
-  - need to push the newest version to main branch to trigger build in Travis CI
+  Automatic Build Creation P2
+  - to fix the error in previous lesson 
+    + By default npm test runs the watcher with interactive CLI. However, you can force it to run tests once and finish the process by setting an environment variable called CI.
+      > -e CI=true
 
+  
+  - Add -e CI= true to the script in .travis.yml
+      script:
+      - docker run -e CI=true hungbui7690/docker-react npm run test -- --coverage
 
-  (1) git push origin main 
-  (2) refresh travis page
+  - pic: result in Travis CI
 
-  - pic 
-    > error log
+////////////////////////////////////////////
+  ***
+  - You can read up on the CI=true variable here:
+      https://facebook.github.io/create-react-app/docs/running-tests#linux-macos-bash
+
+  - and environment variables in Docker here:
+      https://docs.docker.com/engine/reference/run/#env-environment-variables
+
 
 */
 
