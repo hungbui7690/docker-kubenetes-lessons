@@ -1,9 +1,14 @@
 /*
-  Travis YML File Configuration
-  - pic
+  A Touch More Travis Setup
+  - docker build -f Dockerfile.dev -t hungbui7690/docker-react .
+  - docker run -it hungbui7690/docker-react npm run test
+  - docker run --init hungbui7690/docker-react npm run test -- --coverage
+    > --coverage: give the statistic of this test
+  
 
-  - create .travis.yml
-    *** need to have leading dot
+  ***
+    https://create-react-app.dev/docs/running-tests/#linux-macos-bash
+    https://docs.docker.com/engine/reference/run/#env-environment-variables
 
 */
 

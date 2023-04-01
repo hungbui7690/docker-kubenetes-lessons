@@ -3,6 +3,7 @@
   docker version
   
   Docker Run: 
+  - *** ADD -it TO ALL "DOCKER RUN" COMMANDS IF WE WANT TO USE CTRL+C TO EXIT
   - docker run -it redis 
   - docker run hello-world
   - docker run <image_name>   
@@ -82,7 +83,9 @@
   Attach
   - docker attach <running_container_id>
 
-
+  Test
+  - docker run --init hungbui7690/docker-react npm run test
+  - docker run --init hungbui7690/docker-react npm run test -- --coverage
 
 
 

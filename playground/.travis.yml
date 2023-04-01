@@ -6,3 +6,7 @@ services:
 # these series of steps will be run at first
 before_install:
   - docker build -t hungbui7690/docker-react -f Dockerfile.dev .
+
+# script will run after build
+script:
+  - docker run --init hungbui7690/docker-react npm run test -- --coverage
