@@ -1,6 +1,10 @@
 /*
-  More on Elastic Beanstalk
-  - pic
+  Travis Config for Deployment
+  - when the test is passed > we will setup Travis to deploy our app to AWS Beanstalk
+
+  - .travis.yml
+
+  *** pic: all info we need for this config
 
 */
 
