@@ -1,10 +1,13 @@
 /*
-  Travis Config for Deployment
-  - when the test is passed > we will setup Travis to deploy our app to AWS Beanstalk
+  Automated Deployments
+  - pic > config + result
 
-  - .travis.yml
+  - travis config
+      access_key_id: $AWS_ACCESS_KEY
+      secret_access_key:
+        secure: '$AWS_SECRET_KEY'
 
-  *** pic: all info we need for this config
+  > after setup > push 
 
 */
 
