@@ -1,17 +1,6 @@
 /*
-  Express API Setup
-  - create server/
-    > create package.json 
-      + need to specific with the versions to avoid bugs
-      + check this file for more details about libs that we need to use in this project
-
-    > create keys.js
-      + all info that we need to connect to database 
-
-  *** package.json: 
-    - for both folders: 
-        "dev": "nodemon"
-
+  Connecting to Postgres
+  - create server/index.js
 */
 
 const keys = require('./keys')
