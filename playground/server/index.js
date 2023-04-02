@@ -1,11 +1,10 @@
 /*
-  Generating the React App
-  - Once you have generated the React app you will need to delete the local git repository that Create React App may have automatically initialized.
-  - Inside the newly created client directory, run rm -r .git
-  *** If you miss this step, the client folder will be considered a submodule and pushed as an empty folder to GitHub.
+  Fetching Data in the React App
+  - create src/OtherPage.js
+  - create src/Fib.js
 
-  - npx create-react-app client
-
+  *** these lectures are all about typing...
+    > we use axios without even install it...
 */
 
 const keys = require('./keys')
