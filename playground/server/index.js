@@ -1,10 +1,14 @@
 /*
-  Fetching Data in the React App
-  - create src/OtherPage.js
-  - create src/Fib.js
+  Rendering Logic & Routing
+  - Fib.js
 
-  *** these lectures are all about typing...
-    > we use axios without even install it...
+  - client/package.json
+    > axios 
+    > react-router-dom
+
+  - App.js
+
+
 */
 
 const keys = require('./keys')
