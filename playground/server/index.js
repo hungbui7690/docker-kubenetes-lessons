@@ -1,9 +1,13 @@
 /*
-  More Express API Setup P1
-  - check app-architecture picture to understand
+  More Express API Setup P2
+  - setup some routes 
 
-  - now, we want to make sure express will store data to redis 
-    > below
+  *** after finish setup 
+    - cd server/ 
+    - node index.js 
+      > Error: Cannot find module 'express' 
+        > return error is ok
+        > if we have anything other than this error > typos
 
 */
 
@@ -33,7 +37,6 @@ pgClient.on('connect', (client) => {
     .catch((err) => console.error(err))
 })
 
-///////////////////////////////////////////
 const redis = require('redis')
 
 const redisClient = redis.createClient({
@@ -42,5 +45,40 @@ const redisClient = redis.createClient({
   retry_strategy: () => 1000,
 })
 
-// *** If you need to send regular commands to Redis while in subscriber mode, just open another connection with a new client (use client.duplicate() to quickly duplicate an existing client).
 const redisPublisher = redisClient.duplicate()
+
+//////////////////////////////////////////
+
+app.get('/', (req, res) => {
+  res.send('Hi')
+})
+
+// send to postgres
+app.get('/values/all', async (req, res) => {
+  const values = await pgClient.query('SELECT * from values')
+  res.send(values.rows)
+})
+
+app.get('/values/current', async (req, res) => {
+  redisClient.hgetall('values', (err, values) => {
+    res.send(values)
+  })
+})
+
+app.post('/values', (req, res) => {
+  const index = req.body.index
+
+  if (parseInt(index) > 40) {
+    return res.status(422).send('Index too high')
+  }
+  redisClient.hset('values', index, 'Nothing yet!')
+
+  redisPublisher.publish('insert', index)
+  pgClient.query('INSERT INTO values(number) VALUES ($1)', [index])
+
+  res.send({ working: true })
+})
+
+app.listen(5000, () => {
+  console.log('Listening on port 5000...')
+})
