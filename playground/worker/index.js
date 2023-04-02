@@ -1,14 +1,17 @@
 /*
-  Worker Process Setup
-  - create worker/ 
-    > create package.json
-    > create keys.js 
-    > move index.js there
+  Express API Setup
+  - create server/
+    > create package.json 
+      + need to specific with the versions to avoid bugs
+      + check this file for more details about libs that we need to use in this project
 
-  *** after finish: 
-    - cd worker 
-    - node index.js 
-      > return error of missing redis
+    > create keys.js
+      + all info that we need to connect to database 
+
+  *** package.json: 
+    - for both folders: 
+        "dev": "nodemon"
+
 */
 
 const keys = require('./keys')
