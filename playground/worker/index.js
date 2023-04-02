@@ -1,9 +1,14 @@
 /*
-  Worker Process Setup P1
-  (1) create package.json
+  Worker Process Setup
+  - create worker/ 
+    > create package.json
+    > create keys.js 
+    > move index.js there
 
-  (2) create keys.js
-
+  *** after finish: 
+    - cd worker 
+    - node index.js 
+      > return error of missing redis
 */
 
 const keys = require('./keys')
