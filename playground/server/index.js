@@ -1,13 +1,10 @@
 /*
-  More Express API Setup P2
-  - setup some routes 
+  Generating the React App
+  - Once you have generated the React app you will need to delete the local git repository that Create React App may have automatically initialized.
+  - Inside the newly created client directory, run rm -r .git
+  *** If you miss this step, the client folder will be considered a submodule and pushed as an empty folder to GitHub.
 
-  *** after finish setup 
-    - cd server/ 
-    - node index.js 
-      > Error: Cannot find module 'express' 
-        > return error is ok
-        > if we have anything other than this error > typos
+  - npx create-react-app client
 
 */
 
