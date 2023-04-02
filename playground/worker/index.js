@@ -1,8 +1,3 @@
-/*
-  Connecting to Postgres
-  - create server/index.js
-*/
-
 const keys = require('./keys')
 const redis = require('redis')
 
