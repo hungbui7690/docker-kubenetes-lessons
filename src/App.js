@@ -1,6 +1,12 @@
 /*
-  Workflow With Github
+  Redeploy on Pull Request Merge
   - pic
+
+///////////////////////////////////////////
+
+  Cleanup  ***
+  - delete the application on Beanstalk
+
 
 */
 
